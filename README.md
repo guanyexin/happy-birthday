@@ -24,14 +24,23 @@ const CONFIG = {
 
 搜索 `<!-- ============ LETTER ============ -->`，下面的 `<p>` 段落直接改文字。
 
-### 3. 换成真实照片
+### 3. 照片墙
 
-1. 新建 `images/` 文件夹，把照片放进去（建议宽 600px 左右，别超过 500KB，加载快）
-2. 搜索 `我们的照片墙`，把那三个 `<div class="ph">📷</div>` 换成：
+照片都在 `images/` 里，已经压过尺寸（宽 1100px、质量 82，单张 120–210KB）：
 
-```html
-<div class="ph"><img src="images/photo1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:2px"></div>
-```
+| 文件 | 对应 |
+|---|---|
+| `images/wopu.jpg` | 第一次坐卧铺 |
+| `images/zhuhai.jpg` | 第一次去珠海 |
+| `images/maofengshan.jpg` | 第一次去帽峰山 |
+
+**换照片最简单的方式**：直接用新图覆盖同名文件，页面不用改。
+**想加/换一张**：在 `images/` 放新图，然后把 `index.html` 里对应的 `<img src="images/xxx.jpg">` 和 `<figcaption>` 一起改掉。
+
+小贴士：
+- 竖图用 `object-position:50% 32%` 之类的值把脸挪到框内（数值越大越往下取景）
+- 点照片会在新标签打开原图
+- 建议新图仍然压到 1100px 宽以内，不然手机上加载慢
 
 ### 4. 想换音乐？
 
